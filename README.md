@@ -5,19 +5,22 @@ naniko23 Infra repository
 ### Способ подключения в одну строку:
 
 Воспользуемся командой: 
-`ssh -i ~/.ssh/appuser -A appuser@178.154.222.183 ssh -tt appuser@10.128.0.10`
+`ssh -i ~/.ssh/appuser -A appuser@51.250.69.63 ssh -tt appuser@10.128.0.4`
 
 ### Дополнительное задание:
 
 * Внести в ~/.ssh/config
 ```
 Host bastion
-        HostName 178.154.222.183
+        HostName 51.250.69.63
         User appuser
 Host someinternalhost
-        HostName 10.128.0.10
+        HostName 10.128.0.4
         User appuser
         ProxyJump bastion
 ```
 * воспользоваться командой 
 * `ssh someinternalhost`
+* 
+bastion_IP = 51.250.69.63
+someinternalhost_IP = 10.128.0.4
