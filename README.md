@@ -29,7 +29,7 @@ someinternalhost_IP = 10.128.0.4
 
 Скрипты install_ruby.sh, install_mongodb.sh и deploy.sh находятся в подпапке HW6
 
-testapp_IP = 51.250.75.204
+testapp_IP = 51.250.0.103
 testapp_port = 9292
 
 ### Дополнительное задание:
