@@ -24,3 +24,31 @@ Host someinternalhost
 * 
 bastion_IP = 51.250.69.63
 someinternalhost_IP = 10.128.0.4
+
+## Лекция 6. Деплой тестового приложения
+
+Скрипты install_ruby.sh, install_mongodb.sh и deploy.sh находятся в подпапке HW6
+
+testapp_IP = 51.250.0.103
+testapp_port = 9292
+
+### Дополнительное задание:
+
+Файл startup-script.yaml
+Команда имеет следующий вид:
+`yc compute instance create \
+    --name reddit-app \
+    --hostname reddit-app \
+    --memory=4 \
+    --create-boot-disk image-folder-id=standard-images,image-family=ubuntu-1604-lts,size=10GB \ --network-interface subnet-name=default-ru-central1-a,nat-ip-version=ipv4 \
+    --metadata serial-port-enable=1 \
+    --metadata-from-file user-data=/PATH_TO_LOCAL_REPO/naniko23_infra/startup-script.yaml`, где:
+
+PATH_TO_LOCAL_REPO - путь к скачанному репозиторию.
+
+
+## Лекция 7. Сборка образов VM при помощи Packer
+
+- Создан файл ubuntu16.json для сборки образа ВМ с установленными mongoDB и Ruby
+
+- Параметры folder_id, source_image_family, service_account_key_file задаются через переменные, указанные в файле variables.json

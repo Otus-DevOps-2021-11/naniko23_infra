@@ -1,0 +1,7 @@
+{
+  "build_folder_id": "some_folder_id",
+  "build_source_image_id": "some_source_image_id",
+  "build_account_key_file": "./key.json",
+  "build_ssh_username": "some_username",
+  "build_platform_id": "some_platform_id"
+}
