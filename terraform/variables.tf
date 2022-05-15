@@ -31,6 +31,8 @@ variable "instance_count" {
   description = "Sets number of reddit-app instances to be deployed"
   default = 1
 }
-# variable service_account_key_file{
-#   description = "key .json"
-# }
+variable app_disk_image {
+description = "Disk image for reddit app"
+default = "reddit-app-base"
+}
+
